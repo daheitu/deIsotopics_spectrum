@@ -14,7 +14,7 @@ def compareTwoNum(realNum, TheroNum, tolPPM):
 
 
 def findOneMZ(mz, ms2MzList, begin_idx, tol_ppm):
-    [low_ms, up_ms] = generate_mass_range(mz, tol_ppm)
+    low_ms, up_ms = generate_mass_range(mz, tol_ppm)
     if mz >  ms2MzList[begin_idx]:
         k = begin_idx + 1
         
@@ -28,8 +28,7 @@ def findOneMZ(mz, ms2MzList, begin_idx, tol_ppm):
                     return True, ms2MzList[k]
                 else:
                     k += 1
-            if k == len(ms2MzList):
-                return False, -1
+            return False, -1
     else:
         k = begin_idx - 1
         if ms2MzList[0] > up_ms:
@@ -42,8 +41,7 @@ def findOneMZ(mz, ms2MzList, begin_idx, tol_ppm):
                     return True, ms2MzList[k]
                 else:
                     k -= 1
-            if k == -1:
-                return False, -1
+            return False, -1
 
 
 def detectIsotopic(ms2_dic):
