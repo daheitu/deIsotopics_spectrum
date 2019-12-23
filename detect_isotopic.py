@@ -1,6 +1,6 @@
 import os
 from copy import deepcopy
-from read_spec_from_mgf import read_spec
+#from read_spec_from_mgf import read_spec
 from delta_ppm import generate_mass_range
 
 #os.chdir(r"D:\Onedriver\OneDrive\github\pFind_data_post_analysis.github.io\DETECT_PETIDE_isotpic_cluster")

@@ -39,8 +39,8 @@ def getScanInfoDic(ms2Filepath):
                     lineList = f[p].split(" ")
                     mz = float(lineList[0])
                     ints = float(lineList[1])
-                    charge = int(lineList[2])
-                    specInfo[mz] = [ints, charge]
+                    #charge = int(lineList[2])
+                    specInfo[mz] = [ints]
                     p += 1
             addRankRelInt2Spec(specInfo)
             scanInfoDic[scan] = [mzPre, preCharge, nce, specInfo]
